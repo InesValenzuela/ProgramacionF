@@ -1,0 +1,30 @@
+COMANDOS
+
+pwd. Te dice en que directorio te encuentras trabajando
+ls. Enlista los archivos dentro de un directorio. Ej. ls Descargas
+cd. Te cambia de un directorio a otro. cd Notas
+ls -a. Enlista los archivos dentro de un directorio incluyento los alchivos ocultos.
+man <command>. Te da una descripción de cada comando. Ej. man mkdir
+mkdir. Crea un nuevo directorio. Ej. mkdir Notas
+rmdir. Borra un directorio. Ej. rmdir Notas
+cp. Copia un archivo o directorio. Ej. cp Notas Descargas
+mv. Mueve un archivo. Ej. mv seri gato
+touch. Crea un archivo en blanco. Ej. touch mina
+rm. Elimuna un archivo. Ej. rm mina
+vi. Permite editar archivos. Ej. vi notas.txt
+cat. Te permite ver un archivo. Ej. cat notas.txt
+ls -ld.  Te permite ver los permisos de un archivo especifico
+echo. se utiliza para desplegar mensajes. Ej. echo $SHELL
+Paths. te llevan a un archivo o documento en particular
+~    . te lleva a un directorio raiz. Ej. ~/Documents
+.    .es referencia al directorio actual. Ej. ./INES
+..   .te regresa a una jerarquia arriba . Ej. ../Desktop
+File .Para obtener información sobre qué tipo de archivo es un archivo o un directorio.
+file.exe .es un archivo o programa ejecutable.
+file.txt .un archivo de texto.
+file.png, file.gif, file.jpg .una imagen.
+
+
+
+  
+
