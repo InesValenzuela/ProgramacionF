@@ -1,4 +1,4 @@
-/* Hello World in C, Ansi-style */
+/* Juego in C, Ansi-style */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -13,6 +13,6 @@ puts("Si el número tiene 2 dígitos, súmalos entre si: Ej. 36 -> 3+6=9. Si tu 
 sleep(5);
 puts("Al número resultante súmale 4.");
 sleep(10);
-puts("Muy bien. El resultado es 13 :3");
+puts("Muy bien. El resultado es 13 c:");
 return(EXIT_SUCCESS);
 }

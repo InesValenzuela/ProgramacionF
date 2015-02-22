@@ -7,5 +7,5 @@ write(*,*) 'Si el número tiene 2 dígitos, súmalos entre si: Ej. 36 -> 3+6=9. 
 call sleep(5)
 write(*,*) 'Al número resultante súmale 4.'
 call sleep(10)
-write(*,*) 'Muy bien. El resultado es 13 c:'
+write(*,*) 'Muy bien. El resultado es 13 :3'
 end program hello

@@ -11,6 +11,6 @@ std::cout << "Si el número tiene 2 dígitos, súmalos entre si: Ej. 36 -> 3+6=9
 sleep(5);
 std::cout << "Al número resultante súmale 4.\n";
 sleep(10);
-std::cout << "Muy bien. El resultado es 13 :3\n";
+std::cout << "Muy bien. El resultado es 13 c:\n";
 return(0);
 }
