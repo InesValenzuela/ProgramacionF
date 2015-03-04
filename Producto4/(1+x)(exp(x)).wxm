@@ -1,0 +1,25 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+f(x):= (1+x)*exp(x);
+T3(x):=taylor(f(x), x, 0, 3);
+T9(x):=taylor(f(x), x, 0, 9);
+T13(x):=taylor(f(x), x, 0, 13);
+T15(x):=taylor(f(x), x, 0, 15);
+fortran(T3(x));
+fortran(T9(x));
+fortran(T13(x));
+fortran(T15(x));
+tex(T3(x));
+tex(T9(x));
+tex(T13(x));
+tex(T15(x));
+plot2d ([f(x),T3(x), T9(x), T13(x), T15(x)], [x, -6, 2], [y, -2, 6],
+[legend, "(1+x)exp(x)", "P3", "P9", "P13","P15"],
+[gnuplot_preamble, "set key left"],
+[color, blue, green, orange,red,violet],[box,false]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
