@@ -1,0 +1,142 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\title{Actividad 5}
+
+\author{Valenzuela Carrillo María Inés}
+
+\date{13 de marzo del 2015}
+
+
+\begin{document}
+\maketitle
+
+
+\section{Introduction}
+El objetivo de la actividad 5 es realizar simulaciones de tiros parabólicos con un programa en Fortran y graficar en gnuplot.
+Se denomina movimiento parabólico al realizado por un objeto cuya trayectoria describe una parábola. Se corresponde con la trayectoria ideal de un proyectil que se mueve en un medio que no ofrece resistencia al avance y que está sujeto a un campo gravitatorio uniforme.
+Las ecuaciones que regulan este movimiento son:
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=3 cm]{x.png}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=5 cm]{y.png}
+\end{figure}
+
+Donde x y y son las variables de posición del proyectil, v es la rapidez inicial con la que se lanzó, g la aceleración debida a la gravedad y el ángulo de lanzamiento inicial.Para determinar de forma unívoca la trayectoria de un proyectil, solo es necesario conocer 2 cantidades: la rapidez inicial v y el ángulo con el que se lanzó.
+
+Se pide elaborar el programa de projectiles en Fortran 90, siguiendo el ejemplo brindado.
+
+1.- Vas a tratar de reproducir los resultados que muestra la simulación de Phet, proporcionando la rapidez inicial y el  ángulo de disparo, para encontrar en qué punto cae al suelo el proyectil.
+
+2.- Verifica la consistencia de tu programa, lanzando tu proyectil a 90, 0, 30 y 60 grados. .
+
+3.- Se pide incluir el cálculo del tiempo total de vuelo, la altura máxma que alcanza, y el alcance máximo del proyectil.
+
+
+
+\section{Programa en Fortran}
+
+
+\subsection{Código}
+
+\begin{verbatim}
+!Programa para Tiro Parabolico
+Program Tiro_Parabolico
+        implicit none
+	real, parameter :: pi = 4.0*atan(1.0)
+	real, parameter :: g = 9.81
+	real :: v, a, t, h, d, a_grados
+	real :: x(3000),y(3000)
+	integer :: i
+	write(*,*) 'Proporcione un ángulo inicial en grados'
+	read *, a_grados
+	write(*,*)'Proporcione una velocidad inicial para el proyectil en m/s'
+	read *, v
+	a = a_grados*pi/180.0
+	t = 2*v*sin(a)*(1/g)
+	h = v*v*sin(a)*sin(a)*(1/(2*g))
+
+	IF (a_grados == 90 ) THEN
+		d = 0
+               ELSE
+  		d = v*cos(a)*t
+	ENDIF
+      
+
+	print * , 'Tiempo de vuelo=' , t, 's'
+	print * , 'Altura maxima=' , h, 'm'
+	print * , 'Distancia maxima=' , d, 'm'
+
+	open (1, file = 'Proyectil.dat')
+	open (2, file = 'Tiempos.dat')
+
+	do i = 1,3000
+		t = (float(i)*0.01)
+		x(i) = v*cos(a)*t
+		y(i) = v*sin(a)*t - 0.5*g*t*t
+		write(1,*) x(i), y(i)
+		write (2,*) t
+		if (y(i)<0) exit
+	end do
+        close(1)
+End Program Tiro_Parabolico
+\end{verbatim}
+
+\subsection{Gráficas}
+A continuación se mostrarán las gráficas para 90, 0, 30 y 60 grados respectivamente, así como una imagen al momento de correr el programa en la terminal.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=10 cm]{Terminal90.png}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=10 cm]{Grafica90.png}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=10 cm]{terminal0.png}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=10 cm]{Grafica0.png}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=10 cm]{terminal30.png}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=10 cm]{grafica30.png}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=10 cm]{terminal60.png}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=10 cm]{grafica30.png}
+\end{figure}
+
+\end{document}
