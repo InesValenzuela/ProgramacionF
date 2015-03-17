@@ -1,7 +1,0 @@
-
-
-open (UNIT=1 , FILE='proj.dat') ! Open file 1 , call it proj.dat
-do i =1 ,imax ,1
-   write (UNIT=1 ,*) x( i ) , y( i ) ! Write to proj .dat
-end do
-close (UNIT=1) ! Close file 1 
