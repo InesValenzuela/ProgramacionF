@@ -49,7 +49,7 @@ mestx1= i/48
 end if
 end do
 
-WRITE (3,*) mestx1, maxm1
+WRITE (3,*) mestx1*48,maxm1
 
 maxm2=0
 do i=1345,2688
@@ -60,7 +60,7 @@ mestx2= i/48
 end if
 end do
 
-WRITE (3,*) mestx2, maxm2
+WRITE (3,*) mestx2*48, maxm2 
 
 maxm3=0
 do i=2688,4032
@@ -71,7 +71,7 @@ mestx3= i/48
 end if
 end do
 
-WRITE (3,*) mestx3, maxm3
+WRITE (3,*) mestx3*48, maxm3
 
 
 maxm4=0
@@ -83,7 +83,7 @@ mestx4= i/48
 end if
 end do
 
-WRITE (3,*) mestx4, maxm4
+WRITE (3,*) mestx4*48, maxm4
 
 
 maxm5=0
@@ -95,7 +95,7 @@ mestx5= i/48
 end if
 end do
 
-WRITE (3,*) mestx5, maxm5
+WRITE (3,*) mestx5*48, maxm5
 
 
 !........................................................................
@@ -158,7 +158,7 @@ diatx1=i*0.5
 end if
 end do
 
-WRITE (2,*) diatx1, maxd1
+WRITE (2,*) diatx1*2, maxd1 
 
 maxd12=0
 do i=59,82
@@ -169,7 +169,7 @@ diatx12=i*0.5
 end if
 end do
 
-WRITE (2,*) diatx12,maxd12
+WRITE (2,*) diatx12*2,maxd12
 
 maxd2=0
 do i=83,106
@@ -180,7 +180,7 @@ diatx2=i*0.5
 end if
 end do
 
-WRITE (2,*) diatx2,maxd2
+WRITE (2,*) diatx2*2,maxd2
 
 maxd22=0
 do i=107,130
@@ -191,7 +191,7 @@ diatx22=i*0.5
 end if
 end do
 
-WRITE (2,*) diatx22,maxd22
+WRITE (2,*) diatx22*2,maxd22
 
 maxd3=0
 do i=131,154 
@@ -202,7 +202,7 @@ diatx3=i*0.5
 end if
 end do
 
-WRITE (2,*) diatx3,maxd3
+WRITE (2,*) diatx3*2,maxd3
 
 maxd32=0
 do i=155,178
@@ -213,7 +213,7 @@ diatx32=i*0.5
 end if
 end do
 
-WRITE (2,*) diatx32,maxd32
+WRITE (2,*) diatx32*2,maxd32
 
 maxd4=0
 do i=179,202
@@ -224,7 +224,7 @@ diatx4=i*0.5
 end if
 end do
 
-WRITE (2,*) diatx4,maxd4
+WRITE (2,*) diatx4*2,maxd4
 
 maxd42=0
 do i=203,226
@@ -235,7 +235,7 @@ diatx42=i*0.5
 end if
 end do
 
-WRITE (2,*) diatx42,maxd42
+WRITE (2,*) diatx42*2,maxd42
 
 maxd5=0
 do i=227,250
@@ -246,7 +246,7 @@ diatx5=i*0.5
 end if
 end do
 
-WRITE (2,*) diatx5,maxd5
+WRITE (2,*) diatx5*2,maxd5
 
 maxd52=0
 do i=251,274
@@ -257,7 +257,7 @@ diatx52=i*0.5
 end if
 end do
 
-WRITE (2,*) diatx52,maxd52
+WRITE (2,*) diatx52*2,maxd52
 
 maxd6=0
 do i=275,298
@@ -268,7 +268,7 @@ diatx6=i*0.5
 end if
 end do
 
-WRITE (2,*) diatx6,maxd6
+WRITE (2,*) diatx6*2,maxd6
 
 maxd62=0
 do i=299,322
@@ -279,7 +279,7 @@ diatx62=i*0.5
 end if
 end do
 
-WRITE (2,*) diatx62,maxd62
+WRITE (2,*) diatx62*2,maxd62
 
 !........................................................................
 !Períodos por mes

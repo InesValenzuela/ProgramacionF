@@ -1,4 +1,5 @@
-!Programa para calcular los periodos de la marea corresponden al manglar El Sargento
+!Programa para calcular los periodos de la marea corresponden
+al manglar El Sargento
 !Realizado por Inés Valenzuela
 
 Program mareas
@@ -18,8 +19,10 @@ real ::mestx1,mestx2,mestx3,mestx4,mestx5 !Tiempo para cada máximo del mes
 real :: delta2,minm1,minm2,minm3,minm4,minm5 !Mínimo para cada mes
 real :: mestn1,mestn2,mestn3,mestn4,mestn5 !tiempo para cada mínimo del mes
 
-real :: delta3,maxd1,maxd2,maxd3,maxd4,maxd5,maxd6,maxd12,maxd22,maxd32,maxd42,maxd52,maxd62 !Máximo por cada medio día
-real :: diatx1,diatx2,diatx3,diatx4,diatx5,diatx6,diatx12,diatx22,diatx32,diatx42,diatx52,diatx62 !Tiempo de máximos por día
+real :: delta3,maxd1,maxd2,maxd3,maxd4,maxd5,maxd6,maxd12,maxd22,
+maxd32,maxd42,maxd52,maxd62 !Máximo por cada medio día
+real :: diatx1,diatx2,diatx3,diatx4,diatx5,diatx6,diatx12,diatx22,
+diatx32,diatx42,diatx52,diatx62 !Tiempo de máximos por día
 
 real :: Pm1,Pm2,Pm3,Pm4 !Período por mes
 real :: Pd1,Pd2,Pd3,Pd4,Pd5,Pd6,Pd7,Pd8,Pd9,Pd10,Pd11 !Período por medio día
@@ -390,11 +393,49 @@ Print *,'El período promedio diario de maximos es:',Pd
 end program mareas
 
 
+\end{verbatim}
+
+\subsection{Resultados}
+
+El programa arrojó los siguientes resultados:
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=10 cm]{terminal1.png}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=10 cm]{terminal2.png}
+\end{figure}
+
+\clearpage
+
+\newpage 
+
+
+\section{Interpretación de gráficas y resultados}
+
+En la siguiente gráfica se pueden mostrar los registros del nivel del mar a partir de octubre hasta  marzo del siguiente año.
+
+\begin{figure}[ht]
+\includegraphics[width=11 cm]{mareas.png}
+\end{figure}
+
+Mediante el programa en FORTRAN obtuvimos los máximos por mes durante 5 meses y los guardamos en un archivo “maxmes.dat”.  Esta gráfica muestra el contraste entre los datos que nos proporcionaron inicialmente y los máximos que se encontraron por mes. Como se puede ver en la gráfica los puntos máximos coinciden y se tiene solamente uno en el mes, lo cual es lógico debido a que el periodo encontrado fue de aproximadamente 29 días, es decir, el pleamar máximo de cada mes ocurre en ese lapso de tiempo.
 
 
 
+\begin{figure}[ht]
+\includegraphics[width=11 cm]{maxmes.png}
+\end{figure}
 
+Por último, la gráfica que a continuación se muestra señala los máximos durante 6 días del mes de octubre, al igual que en la anterior se compara con los datos que nos dieron inicialmente, pero esta vez en un rango más pequeño. 
 
+Todos los máximos coinciden, y los resultados del programa nos  indican que el periodo entre cada pleamar es de aproximadamente 12 horas, por lo tanto es fácil concluir que se tienen dos máximos por día. Con lo anterior se puede deducir que no es una marea diurna, en donde se tiene solo un pleamar por día, sino que es una semi-diurna ya que cuenta con dos pleamar y dos bajamar cada día. 
 
+\begin{figure}[ht]
+\includegraphics[width=11 cm]{maxdia.png}
+\end{figure}
 
-
+\end{document}
